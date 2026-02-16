@@ -1,7 +1,9 @@
 ---
 title: "2025 MLB Player-Pitch Rankings"
 author: "By Cole Geller"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 ## Objective
 Identify the most effective pitch during the 2025 MLB season using a publicly available performance-metric dataset with a player-pitch unit-of-observation.
@@ -20,7 +22,7 @@ Using the __[Baseball Savant Pitch Arsenal Stats Leaderboard (2025)][id]__, I an
 ```{r}
 
 # Loading dataset
-player_pitch <- read.csv('pitch-arsenal-stats.csv')
+player_pitch <- read.csv('player_pitch.csv')
 
 # Removing unnecessary columns
 player_pitch_ranked <- subset(player_pitch, select = -c(team_name_alt, player_id, pitch_name, pitches, pitch_usage, pa))
@@ -139,10 +141,5 @@ cat(
 
 ## Conclusion
 Mason Miller’s slider stands out as the most effective pitch of the 2025 MLB season, ranking at or near the top across both contact-quality and swing-and-miss metrics. Its combination of velocity, late vertical depth, and sharp glove-side movement allows it to suppress damage while generating elite strikeout rates. The consistency of its performance across all twelve evaluated metrics underscores its dominance relative to other high-usage pitches league-wide. Future work could incorporate pitch-tracking characteristics (e.g. vertical drop, horizontal break) to better understand why Miller’s slider performs at such an exceptional level and how its underlying traits compare to other top-tier MLB pitches.
-
-```{r, echo = FALSE}
-write.csv(player_pitch_ranked, file = "player_pitch_ranked.csv")
-```
-
 
 [id]: https://baseballsavant.mlb.com/leaderboard/pitch-arsenal-stats "Baseball Savant Pitch Arsenal Stats Leaderboard (2025)"
