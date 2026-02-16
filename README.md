@@ -1,1 +1,1 @@
-Using the __Baseball Savant Pitch Arsenal Stats Leaderboard (2025), I analyzed all 508 player-pitches thrown at least 405 times (Baseball Savant’s qualifier). To evaluate overall effectiveness, each pitch was ranked across these key performance metrics.
+Using the __Baseball Savant Pitch Arsenal Stats Leaderboard (2025)__, I analyzed all 508 player-pitches thrown at least 405 times (Baseball Savant’s qualifier). To evaluate overall effectiveness, each pitch was ranked across these key performance metrics.
